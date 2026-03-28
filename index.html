@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 165th Verse | Self-Purity & Divine Grace</title>
+    <style>
+        /* สไตล์แบบ Minimalist Artisan */
+        body {
+            background-color: #000000; /* พื้นหลังดำสนิท */
+            color: #B8860B; /* ตัวอักษรสีทองเข้ม */
+            font-family: 'Times New Roman', serif; /* ให้ความรู้สึกคลาสสิกสไตล์วิชาการ */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #B8860B;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.2s forwards;
+        }
+
+        .english {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .thai {
+            font-size: 1.1rem;
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* ปุ่มนำทางแบบเรียบง่าย */
+        .nav-btn {
+            background: none;
+            border: 1px solid #B8860B;
+            color: #B8860B;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-family: inherit;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #B8860B;
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="buddha-view" class="container">
+        <h1>Individual Responsibility | ความรับผิดชอบเฉพาะตน</h1>
+        
+        <div class="section" style="animation-delay: 0.5s;">
+            <span class="english">By oneself is evil done; by oneself is one defiled.</span>
+            <span class="thai">ตนทำบาปเอง ย่อมเศร้าหมองเอง</span>
+        </div>
+
+        <div class="section" style="animation-delay: 1s;">
+            <span class="english">By oneself is evil left undone; by oneself is one made pure.</span>
+            <span class="thai">ตนไม่ทำบาปเอง ย่อมบริสุทธิ์เอง</span>
+        </div>
+
+        <div class="section" style="animation-delay: 1.5s;">
+            <span class="english">Purity and impurity depend on oneself; no one can purify another.</span>
+            <span class="thai">ความบริสุทธิ์หรือไม่บริสุทธิ์เป็นของเฉพาะตน คนอื่นจะทำให้คนอื่นบริสุทธิ์ไม่ได้</span>
+        </div>
+
+        <button class="nav-btn" onclick="switchView('grace')">Explore Divine Grace →</button>
+    </div>
+
+    <div id="grace-view" class="container hidden">
+        <h1>Divine Grace | พระคุณจากเบื้องบน</h1>
+
+        <div class="section">
+            <span class="english">For by grace you have been saved through faith, and this is not your own doing; it is the gift of God.</span>
+            <span class="thai">ด้วยว่าซึ่งท่านทั้งหลายรอดนั้นก็รอดโดยพระคุณเพราะความเชื่อ และมิใช่โดยตัวท่านทั้งหลายเอง แต่เป็นของประทานจากพระเจ้า</span>
+        </div>
+
+        <div class="section">
+            <span class="english">He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness.</span>
+            <span class="thai">พระองค์เองได้ทรงแบกรับบาปทั้งหลายของเราไว้ในพระกายของพระองค์ที่ต้นไม้นั้น เพื่อว่าเราจะได้ตายต่อบาปและดำเนินชีวิตเพื่อความชอบธรรม</span>
+        </div>
+
+        <div class="section">
+            <span class="english">The blood of Jesus cleanses us from all sin, granting a purity that no man can achieve for himself.</span>
+            <span class="thai">พระโลหิตของพระเยซูคริสต์ชำระเราให้สะอาดจากบาปทั้งปวง มอบความบริสุทธิ์ซึ่งมนุษย์ไม่สามารถสร้างขึ้นได้ด้วยตนเอง</span>
+        </div>
+
+        <button class="nav-btn" onclick="switchView('self')">← Back to Self-Reliance</button>
+    </div>
+
+    <script>
+        function switchView(target) {
+            const buddha = document.getElementById('buddha-view');
+            const grace = document.getElementById('grace-view');
+            
+            document.body.style.opacity = '0'; // ค่อยๆ จางออก (Slow Life Transition)
+            
+            setTimeout(() => {
+                if (target === 'grace') {
+                    buddha.classList.add('hidden');
+                    grace.classList.remove('hidden');
+                } else {
+                    grace.classList.add('hidden');
+                    buddha.classList.remove('hidden');
+                }
+                document.body.style.opacity = '1'; // ค่อยๆ จางกลับคืนมา
+            }, 800);
+        }
+    </script>
+</body>
+</html>
